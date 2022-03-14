@@ -1,5 +1,6 @@
 import React from "react";
 import PhoneContainer from "./components/PhoneContainer";
+import TvContainer from "./components/tvContainer";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 
@@ -8,6 +9,7 @@ function App() {
     <Provider store={store}>
       <div className="section-one">
         <PhoneContainer />
+        <TvContainer />
       </div>
     </Provider>
   );

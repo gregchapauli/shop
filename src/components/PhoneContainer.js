@@ -4,7 +4,7 @@ import phone from "../images/phone.png";
 import { buyPhone } from "../redux/Phone/actionPhone";
 
 function PhoneContainer() {
-  const phones = useSelector((state) => state.phones);
+  const phones = useSelector((state) => state.phone.phones);
   const dispatch = useDispatch();
 
   return (
@@ -12,7 +12,7 @@ function PhoneContainer() {
       <img src={phone} alt="phone" />
       <p>
         Disponibilité:
-        <span id="count">{phones}</span>
+        <span id="count"> {phones}</span>
       </p>
       <button onClick={() => dispatch(buyPhone())}>Acheter</button>
     </div>

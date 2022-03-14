@@ -35,6 +35,8 @@ button {
   border: 1px solid purple;
   background: purple;
   padding: 10px;
+  min-width: 200px;
+  margin-right: 2px;
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
@@ -43,4 +45,13 @@ button {
 button:hover {
   border: 1px solid rgb(54, 4, 54);
   background: rgb(54, 4, 54);
+}
+
+input {
+  max-width: 40px;
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
 }

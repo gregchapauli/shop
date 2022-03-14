@@ -9,8 +9,9 @@ const tvReducer = (state = initialStateTv, action) => {
     case BUY_TV:
       return {
         ...state,
-        tv: state.tv - 1,
+        tv: state.tv - action.payload,
       };
+
     default:
       return state;
   }

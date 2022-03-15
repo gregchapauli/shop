@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   LOAD_COMMENTS,
   LOAD_COMMENTS_SUCCESS,
@@ -23,5 +24,16 @@ const LoadApiCommentsError = (error) => {
 };
 
 export const apiCall = () => {
-  return () => {};
+  return (dispatch) => {
+    dispatch(LoadApiComments());
+
+    axios
+      .get("https://jsonplaceholder.typicode.com/comments")
+      .then((res) => {
+        dispatch(LoadApiCommentsSuccess(res.data));
+      })
+      .catch((err) => {
+        dispatch(LoadApiCommentsError(err.message));
+      });
+  };
 };

@@ -1,7 +1,8 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import phoneReducer from "./Phone/reducerPhone";
 import tvReducer from "./tv/reducerTv";
 import commentReducer from "./comments/reducerComments";
+import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
   phone: phoneReducer,
@@ -9,6 +10,6 @@ const rootReducer = combineReducers({
   comments: commentReducer,
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

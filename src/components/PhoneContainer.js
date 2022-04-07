@@ -13,11 +13,11 @@ function PhoneContainer() {
     <div className="container">
       <img src={phone} alt="phone" />
       <p>
-        Disponibilité:
+        Quantity:
         <span id="count"> {phones}</span>
       </p>
       <div className="btnContainer">
-        <button onClick={() => dispatch(buyPhone(totalPhone))}>Acheter</button>
+        <button onClick={() => dispatch(buyPhone(totalPhone))}>Buy</button>
         <input
           type="number"
           value={totalPhone}

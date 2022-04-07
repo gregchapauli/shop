@@ -13,11 +13,11 @@ function TvContainer() {
     <div className="container">
       <img src={tv} alt="tv" />
       <p>
-        Disponibilité:
+        Quantity:
         <span id="count"> {television}</span>
       </p>
       <div className="btnContainer">
-        <button onClick={() => dispatch(buyTv(totalTv))}>Acheter</button>
+        <button onClick={() => dispatch(buyTv(totalTv))}>Buy</button>
         <input
           type="number"
           value={totalTv}
